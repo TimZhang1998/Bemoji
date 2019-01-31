@@ -1,0 +1,15 @@
+---
+declared-services:
+  watson-vision-combined-cv:
+    label: watson_vision_combined
+    plan: lite
+applications:
+- path: .
+  memory: 64M
+  instances: 1
+  domain: mybluemix.net
+  name: node-bemoji
+  host: node-bemoji
+  disk_quota: 1024M
+  services:
+  - watson-vision-combined-cv

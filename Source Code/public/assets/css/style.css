@@ -1,0 +1,263 @@
+/* ==== Google font ==== */
+@import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
+
+body {
+	  background: url(../img/gbb.jpg) no-repeat;
+    background-size: cover  ;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    z-index: -1;
+  }
+.img1{
+    width: 200px;
+    position:absolute;
+    top:-5px;
+    left:20px
+}
+.gif{
+  position: absolute;
+  top:497px;
+  right: 403px;
+  z-index: 0;
+  width:396px;
+  height:268px;
+}
+@media only screen and (max-width: 1125px) 
+{
+  body {
+    /* For mobile phones: */
+    background: orange;
+    background-size: cover  ;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+  }    
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+    width: 100%
+  }
+  .img1{
+    width: 150px;
+  }
+  .gif{
+  z-index: 0;
+  width:396px;
+  height:268px;
+  }
+  
+
+}
+
+ 
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #444;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h3 {
+	font-weight: 400;
+}
+
+h4 {
+	font-weight: 400;
+	font-size: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+a {
+    color: #ACBAC1;
+    word-wrap: break-word;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #4F92AF;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+.alignleft {
+    text-align: left;
+}
+.alignright {
+    text-align: right;
+}
+
+.aligncenter {
+    text-align: center;
+}
+.copyrights{
+	text-indent:-9999px;
+  position: fixed;
+  bottom: 50px;
+	height:0;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+.btn-theme  {
+  color: #fff;
+  background-color: #4F92AF;
+  border-color: #4F92AF;
+}
+.btn-theme:hover  {
+  color: #fff;
+  background-color: #444;
+  border-color: #444;
+}
+form.signup input[type=email]  {
+	height: 42px;
+	width: 200px;
+	border-radius: 0;
+	border: none;
+}
+form.signup button.btn {
+	font-weight: 700;
+}
+form.signup input.form-control:focus {
+	border-color: #fd680e;
+}
+
+
+/* wrapper */
+
+
+
+h2.subtitle {
+	color: #fff;
+	font-size: 24px;
+}
+
+/* countdown */
+#countdown {
+	font-size: 48px;
+	color: #fff;
+	line-height: 1.1em;
+	margin: 40px 0 60px;
+}
+
+
+/* footer */
+p.copyright {
+	margin-top: 50px;
+	color: #fff;
+	text-align: center;
+}	
+
+.cloud{
+  position:absolute;
+  bottom:110px;
+  left:300px;
+}
+.cloud.fliped img{
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.cloud.pos1{
+  right:482px;
+  left:auto;
+  top:145px;
+  z-index: 1
+}
+.cloud.pos1 img{
+  width:200px;
+}
+.result{
+  position: absolute;
+  top:0px;
+  padding: 7px 10px 7px 20px;
+  left:auto;
+  right:0px;
+  color: #fff;
+}
+.result.success{
+  background: #2ecc71;
+}
+.result.error{
+  background: #2c3e50;
+}
+.result span{
+  margin-left: 10px;
+}
+.result.error span{
+  margin-right: 5px;
+}
+
+
+
+/* For desktop: */
+
+.col-1 {width: 30%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {height: : 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}

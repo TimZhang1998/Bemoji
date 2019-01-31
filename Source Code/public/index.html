@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="shortcut icon" href="assets/img/icon.ico">
+    <title>Bmoji</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="assets/css/camera.css">
+  </head>
+
+  <body background="assets/img/8.gif" style="background-size:cover;">
+    <br/>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <video id="video" height="400px" width="400px" autoplay="autoplay" style="object-fit:inherit;position: absolute;top: 60px;left: 417px;border-radius:50%"></video> 
+      <canvas id="canvas" height="400px" width="400px" style="position: absolute;top: 60px;left: 417px;border-radius:50%;z-index:1;" ></canvas> 
+      Select your image to upload:
+      <p class="blueButton"></p>
+      <input type="file" class="blueButton" style="opacity: 0" name="file" onchange="previewFile();">
+      <input type="submit" class="blueButton4" value="" >
+    </form>
+    <br/>
+    <br/>   
+         <img  src=" " id="save_img" height="400" style="position:absolute;top: 60px;left: 417px; border-radius:50%;z-index: 2" alt="">
+      
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      Open your camera to upload:
+      <input type="button" id="snap" class="blueButton2" value="">
+      
+       <br/>
+       <br/>
+       <br/>
+      <p>UPLOAD:</p>
+    </form>
+    	
+
+
+
+
+<script type="text/javascript">  
+        var aVideo=document.getElementById('video');
+                var aCanvas=document.getElementById('canvas');
+                var ctx=aCanvas.getContext('2d');
+                
+                navigator.getUserMedia  = navigator.getUserMedia ||
+                          navigator.webkitGetUserMedia ||
+                          navigator.mozGetUserMedia ||
+                          navigator.msGetUserMedia;//获取媒体对象（这里指摄像头）
+              navigator.getUserMedia({video:true}, gotStream, noStream);//参数1获取用户打开权限；参数二成功打开后调用，并传一个视频流对象，参数三打开失败后调用，传错误信息
+                
+                function gotStream(stream) {
+                        video.src = URL.createObjectURL(stream);
+                        video.onerror = function () {
+                          stream.stop();
+                        };
+                        stream.onended = noStream;
+                        video.onloadedmetadata = function () {
+                          alert('camera open！');
+                        };
+                }
+                function noStream(err) {
+                        alert(err);
+      }
+      document.getElementById("snap").addEventListener("click", function() {
+                
+                ctx.drawImage(aVideo, 0, 0, 400, 400);//将获取视频绘制在画布上
+                            $.post('server.js', { "img": canvas.toDataURL().substr(22) }, function (data, status) {
+                alert(status!="success"?"图片处理出错！":data== "yes"?"图片上传完成！":data);           
+            }, "text");
+        
+});
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}
+var butSave = document.getElementById("save");
+butSave.onclick=function(){
+    var svaeHref = document.getElementById("save_href");
+    /*
+     * 传入对应想要保存的图片格式的mime类型
+     * 常见：image/png，image/gif,image/jpg,image/jpeg
+     */
+    var img = document.getElementById("save_img");
+    var tempSrc = canvas.toDataURL("image/png");
+    svaeHref.href=tempSrc; 
+    img.src=tempSrc;  
+};   
+    </script>        
+  </body>
+
+</html>

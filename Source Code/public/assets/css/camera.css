@@ -1,0 +1,162 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
+body{
+	background: url(../img/8.gif) no-repeat;
+	background-size: cover;
+}
+.upload{
+	position: fixed;
+	top: 483px;
+	left: 5px;
+	font-family: 微软雅黑;
+	font-size: 20px;
+}
+
+ *{
+    margin: 0;
+    padding: 0;
+}
+
+.blueButton{
+	background: url(../img/file.png) no-repeat center;
+    position: absolute;
+    left: 225px;
+    bottom:685px;
+    display: block;
+    width: 45px;
+    height: 40px;
+    background-color: #ADFF2F;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font:normal normal normal 16px/40px 'Microsoft YaHei';
+    cursor: pointer;
+    border-radius: 4px;
+}
+.blueButton:hover{
+    text-decoration: none;
+}
+.myFileUpload
+            {
+                position: absolute;
+                left: 880px;
+    			bottom: 160px;
+                display: block;
+                width: 45px;
+                height: 40px;
+                
+            }
+.camera{
+	background: url(../img/camera.png);
+	position: absolute;
+	left: 500px;
+	width: 200px;
+	height: 200px;
+}
+.blueButton1{
+	background: url(../img/add.png) no-repeat center;
+    position: absolute;
+    left: 34px;
+    bottom: 308px;
+    display: block;
+    width: 45px;
+    height: 40px;
+    background-color:#ADFF2F;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font:normal normal normal 16px/40px 'Microsoft YaHei';
+    cursor: pointer;
+    border-radius: 4px;
+}
+.blueButton1:hover{
+    text-decoration: none;
+}
+.myFileUpload1
+            {
+                position: absolute; 
+                left: 540px;
+    			bottom: 160px;
+                display: block;
+                width: 100px;
+                height: 40px;
+                opacity: 0;
+            }
+
+.blueButton2{
+	background: url(../img/camera.png) no-repeat center;
+    position: absolute;
+    left: 224px;
+    bottom: 628px;
+    display: block;
+    width: 45px;
+    height: 40px;
+    background-color:  	#ADFF2F;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font:normal normal normal 16px/40px 'Microsoft YaHei';
+    cursor: pointer;
+    border-radius: 4px;
+}
+.blueButton2:hover{
+    text-decoration: none;
+}
+.blueButton3{
+	
+    position: absolute;
+    left: 540px;
+    bottom: 200px;
+    display: block;
+    width: 45px;
+    height: 40px;
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font:normal normal normal 16px/40px 'Microsoft YaHei';
+    cursor: pointer;
+    border-radius: 4px;
+}
+.blueButton3:hover{
+    text-decoration: none;
+}
+.blueButton4{
+    background: url(../img/upload.png) no-repeat center;
+    position: absolute;
+    left:  223px;
+    bottom: 567px;
+    display: block;
+    width: 45px;
+    height: 40px;
+    background-color:   #ADFF2F;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font:normal normal normal 16px/40px 'Microsoft YaHei';
+    cursor: pointer;
+    border-radius: 4px;
+}
+.blueButton4:hover{
+    text-decoration: none;
+}
+.blueButton5{
+    background: url(../img/upload1.png) no-repeat center;
+    position: absolute;
+    left:  150px;
+    bottom: 308px;
+    display: block;
+    width: 50px;
+    height: 40px;
+    background-color:   #ADFF2F;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font:normal normal normal 16px/40px 'Microsoft YaHei';
+    cursor: pointer;
+    border-radius: 4px;
+}
+.blueButton5:hover{
+    text-decoration: none;
+}
+
+

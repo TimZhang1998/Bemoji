@@ -1,0 +1,15 @@
+---
+declared-services:
+  personality-insights-tutorial:
+    label: personality_insights
+    plan: lite
+applications:
+- path: .
+  memory: 64M
+  instances: 1
+  domain: mybluemix.net
+  name: test2zc666
+  host: test2zc666
+  disk_quota: 1024M
+  services:
+  - personality-insights-tutorial
